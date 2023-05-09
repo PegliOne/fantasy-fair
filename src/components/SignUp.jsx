@@ -1,6 +1,8 @@
 const SignUp = () => {
   return ( 
-    <h1>Sign Up</h1>
+    <main>
+      <h1>Sign Up</h1>
+    </main>
   );
 }
  
