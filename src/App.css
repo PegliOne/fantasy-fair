@@ -3,6 +3,28 @@
   text-align: center;
 }
 
+.App main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: #91BAD6;
+}
+
+.App main h1, .App main h2 {
+  color: #192841;
+}
+
+.App main h1 {
+  margin: 48px 0;
+}
+
+.App main h2 {
+  margin-bottom: 48px;
+}
+
+/* Navbar Styling */
+
 .App-header {
   background-color: #192841;
   display: flex;
@@ -47,25 +69,7 @@
   background-color: #2D3033;
 }
 
-.App main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  background-color: #91BAD6;
-}
-
-.App main h1, .App main h2 {
-  color: #192841;
-}
-
-.App main h1 {
-  margin: 48px 0;
-}
-
-.App main h2 {
-  margin-bottom: 48px;
-}
+/* Story List Styling */
 
 .App main div.story {
   width: 800px;

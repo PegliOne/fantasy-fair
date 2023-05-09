@@ -1,3 +1,5 @@
+import StoryList from "../shared/StoryList";
+
 const Home = () => {
   const popularStories = [
     {
@@ -34,11 +36,7 @@ const Home = () => {
     <main>
       <h1>Welcome to Fantasy Fair!</h1>
       <h2>Check out these Popular Stories</h2>
-      <section>
-        { popularStories.map((story) => <div className="story">
-          <a href="#">{ `${story.title} (${story.year}) by ${story.author}` }</a>: { story.blurb }
-        </div>) }
-      </section>
+      <StoryList stories={popularStories} />
     </main>
   );
 }
