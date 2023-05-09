@@ -2,11 +2,12 @@ import './App.css';
 import Navbar from './components/shared/Navbar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/homepage/Home';
-import Story from './components/stories/Story';
+
 import Categories from './components/categories/Categories';
 import Create from './components/create/Create';
 import SignUp from './components/sign-up/SignUp';
 import LogIn from './components/log-in/LogIn';
+import Story from './components/story/StoryDetails';
 
 function App() {
   return (

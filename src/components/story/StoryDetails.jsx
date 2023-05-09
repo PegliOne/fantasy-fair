@@ -1,6 +1,8 @@
 const Story = () => {
   return ( 
-    <div>Story Title</div>
+    <main>
+      <div>Story Title</div>
+    </main>
   );
 }
  
