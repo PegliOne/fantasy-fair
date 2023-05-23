@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/homepage/Home';
 
 import Categories from './components/categories/Categories';
+import Category from './components/categories/Category';
 import Create from './components/create/Create';
 import SignUp from './components/sign-up/SignUp';
 import LogIn from './components/log-in/LogIn';
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path="/stories/:id">
             <Story/>
+          </Route>
+          <Route path="/categories/:category">
+            <Category/>
           </Route>
           <Route path="/categories">
             <Categories/>
