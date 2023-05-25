@@ -1,13 +1,11 @@
 import _ from 'lodash';
 import { useParams } from "react-router-dom";
 import useFetchStories from "../../hooks/useFetchStories";
+import capitalise from './capitalise';
 import StoryList from "../shared/StoryList";
+import { BackLink } from '../shared/styles';
 
 const url = 'http://localhost:8000/stories';
-
-function capitalise(category) {
-  return category.charAt(0).toUpperCase() + category.slice(1);
-}
 
 const Category = () => {
   const { category } = useParams();
@@ -15,9 +13,10 @@ const Category = () => {
 
   return ( 
     <main>
-      <h1>{capitalise(category)}</h1>
+      <h1>{capitalise(category)} Stories</h1>
       { !!error && <div><p className="error">Error: { error }</p></div>}
-      { !!stories && <StoryList stories={ stories.filter((story) => story.category === category) } />}
+      { !!stories && <StoryList stories={ stories.filter((story) => story.category === category.toLowerCase()) } />}
+      <BackLink to="/">Or view all popular stories</BackLink>
     </main>
   );
 }

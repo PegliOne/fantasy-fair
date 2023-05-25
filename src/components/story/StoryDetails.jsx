@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { useParams } from "react-router-dom";
 import useFetchStories from "../../hooks/useFetchStories";
-import { Link } from "react-router-dom";
+import { BackLink } from "../shared/styles";
 
 const StorySection = styled.section`
   h1 {
@@ -32,7 +32,7 @@ const Story = () => {
         <h1>{ story.title } ({ story.year })</h1>
         <p>By { story.author }</p>
         <div>{ story.body }</div>
-        <Link to="/">Back to Story List</Link>
+        <BackLink to="/">Back to Story List</BackLink>
       </StorySection> }
     </main>
   );

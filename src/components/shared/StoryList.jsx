@@ -1,26 +1,10 @@
 import styled from '@emotion/styled';
+import { LinkListContainer } from './styles';
 import { Link } from 'react-router-dom';
 
-const StorySection = styled.section`
-  a {
-    color: #192841;
-    text-decoration: none;
-
-    div {
-      margin-bottom: 24px;
-      padding: 24px 0;
-      border: 2px solid #192841;
-      color: #192841;
-      transition: background-color 200ms;
-
-      &:hover {
-        background-color: #D1E5F4;
-      }
-
-      span {
-        font-weight: 600;
-      }
-    }
+const StorySection = styled(LinkListContainer)`
+  a div span {
+    font-weight: 600;
   }
 `
 
