@@ -10,10 +10,12 @@ const LinkListContainer = styled.section`
 
     div {
       margin-bottom: 24px;
-      padding: 24px 0;
+      padding: 24px 12px;
       border: 2px solid #192841;
       color: #192841;
       transition: background-color 200ms;
+      overflow: hidden;
+      -webkit-line-clamp: 2;
 
       &:hover {
         background-color: #D1E5F4;
