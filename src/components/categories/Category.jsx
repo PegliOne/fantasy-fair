@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { useParams } from "react-router-dom";
 import useFetchStories from "../../hooks/useFetchStories";
-import capitalise from './capitalise';
+import capitalise from '../shared/capitalise';
 import StoryList from "../shared/StoryList";
 import { BackLink } from '../shared/styles';
 

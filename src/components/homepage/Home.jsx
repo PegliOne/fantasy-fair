@@ -5,7 +5,7 @@ const url = 'http://localhost:8000/stories';
 
 const Home = () => {
   const { stories, error } = useFetchStories(url);
-
+  console.log(stories);
   return ( 
     <main>
       <h1>Welcome to Fantasy Fair!</h1>

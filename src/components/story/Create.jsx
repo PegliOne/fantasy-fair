@@ -1,9 +1,26 @@
+import styled from "@emotion/styled";
 import { useState } from "react";
 import { useHistory } from 'react-router-dom';
+import TextAreaSection from "../shared/form-components/TextAreaSection";
+import StoryDetailsFormSection from "./create-components/StoryDetailsFormSection";
 
 const Create = () => {
+  const StoryForm = styled.form`
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0 24px;
+
+    section {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 24px;
+    }
+  `
+
   const [title, setTitle] = useState('');
+  // Have the default be the current username
   const [author, setAuthor] = useState('Pamela Heystek');
+  const [category, setCategory] = useState('general');
   const [year, setYear] = useState(2023);
   const [blurb, setBlurb] = useState('');
   const [body, setBody] = useState('');
@@ -12,9 +29,8 @@ const Create = () => {
 
   function handleSubmit (e) {
     e.preventDefault();
-    console.log('Submit form');
 
-    const story = { title, author, year, blurb, body };
+    const story = { title, author, year, category, blurb, body };
 
     setIsPending(true);
 
@@ -23,59 +39,27 @@ const Create = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(story)
     }).then(()=> {
-      console.log('new story added');
       setIsPending(false);
       history.push('/');
     })
   }
 
-  // Add onChange events to render statement
-
   return ( 
     <main>
       <h1>Create a Story</h1>
       <h2>Enter your Story here</h2>
-      <form onSubmit={handleSubmit}>
+      <StoryForm onSubmit={handleSubmit}>
         <h3>Story Details</h3>
-        <section>
-          <div className="form-row">
-            <div>
-              <label htmlFor="title">Title:</label>
-              <input id="title" name="title" type="text" placeholder="Enter your story title..." value={title} onChange={(e) => setTitle(e.target.value)} />
-            </div>
-            <div>
-              <label htmlFor="year">Publication Year:</label>
-              <input id="year" name="year" type="number" placeholder="2023" min="1900" max="2023" value={year} onChange={(e) => setYear(e.target.value)} />
-            </div>
-          </div>
-          <div className="form-row">
-            <div>
-              <label htmlFor="author">Author:</label>
-              <input id="author" name="author" type="text" placeholder="Pamela Heystek" value={author} onChange={(e) => setAuthor(e.target.value)} />
-            </div>
-            <div>
-              <label htmlFor="category">Category:</label>
-              <select name="category" id="category">
-                <option value="Romance">Romance</option>
-                <option value="Action">Action</option>
-                <option value="Fantasy">Fantasy</option>
-              </select>
-            </div>
-          </div>  
-        </section>
+        <StoryDetailsFormSection title={title} setTitle={setTitle} year={year} setYear={setYear} author={author} setAuthor={setAuthor} setCategory={setCategory} />
         <h3>Summary</h3>
-        <section>
-          <textarea name="blurb" id="blurb" cols="82" rows="4" placeholder="Enter a summary for your story..." value={blurb} onChange={(e) => setBlurb(e.target.value)} ></textarea>
-        </section>
+        <TextAreaSection label="blurb" value={blurb} rows="4" placeholder="Enter a summary..." function={setBlurb} />
         <h3>Story</h3>
-        <section>
-          <textarea name="body" id="body" cols="82" rows="10" placeholder="Enter your story..." value={body} onChange={(e) => setBody(e.target.value)} ></textarea>
-        </section>
+        <TextAreaSection label="body" value={body} rows="10" placeholder="Enter the story..." function={setBody} />
         <div>
           { !isPending && <button type="submit">Submit Story</button> }
           { isPending && <button type="submit">Submitting Story</button> }
         </div>
-      </form>
+      </StoryForm>
     </main>
   );
 }

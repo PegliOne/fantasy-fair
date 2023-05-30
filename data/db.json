@@ -5,7 +5,7 @@
       "title": "Once in a Lifetime",
       "author": "Amanda Kissenger",
       "year": "2013",
-      "category": "romance",
+      "category": "general",
       "blurb": "A fun, sexy, romantic comedy.",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n\n\nWhere does it come from?\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\n\nWhere can I get some?\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
     },
@@ -37,12 +37,40 @@
       "body": "A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. \n A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. \n A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it."
     },
     {
-      "title": "One of Your Fathers",
+      "title": "Festivals of the Rebellion",
+      "author": "Pamela Heystek",
+      "category": "action",
+      "year": "2017",
+      "blurb": "This story should have the action category",
+      "body": "Through the impenetrable viewport on the bridge of his Gladiator II-class Star Destroyer, the Sith Lord gazed at the dense atmosphere of the white planet, known as Glacian. It was large, but with far less technological capabilities than a typical rebel stronghold and located in the furthest depths of the Outer Rim Territories.\n\nHe did not understand why his master had sent him to restore order to an insignificant wasteland. Perhaps he sought to keep him away from his Rebel son, who was rumoured to be active elsewhere. Whatever the reason, he never refused the chance to demonstrate the might of the Galactic Empire.\n\nHe turned on his control panel's viewscreen and stared along the sleet coated roads of the towns where his personal stormtrooper legion patrolled in pairs, their blasters raised. Cameras placed throughout the planet provided him with hundreds of views to select from. Each featured the same dreary hovels, which were no more than two stories tall and so encrusted with ice they may have been constructed from it.\n\nThe streets were empty of civilians, but the same flag hung from most balconies. Despite the colour distortions created by the projector and his own optical sensors, which together gave the scene a violet tint, he recognised the cursed insignia. The Alliance to Restore the Republic had planted its roots deep. It was his mission to wrench it from the frozen surface of the planet and crush it until it was dust beneath his boots.",
+      "id": "V_b9WUa"
+    },
+    {
+      "title": "A Cool Sci-Fi Story",
+      "author": "Jackson Heystek",
+      "category": "sci-fi",
+      "year": 2023,
+      "blurb": "I know my husband can write a great sci-fi story if I push him to.",
+      "body": "General Maximillian Veers, who was leading the four stormtrooper divisions on the ground, among which was the Sith Lord's own 501st Legion, contacted him via his comlink. \"Lord Vader,\" he said, \"what are your orders?\n\n\"Command your units to find the rebels hiding in the urban regions,\" said the Sith Lord. \"Question every resident and leave no space unexamined. Our enemies are deceptive and have many allies here. Transport anyone who attempts to conceal them to the town centre where they will be visible from the surrounding buildings.\"\n\n\"What of the rebels themselves, Sir?\"\n\n\"Bring them aboard my ship. I will deal with them myself.\" His burnt lips twitched behind his black mask.\n\n\"Understood, we will inform you of any delays.\"\n\n\"Glacian is weak and our control over it is firm. If you demonstrate a reasonable degree of competence, you will face no serious obstacles in your mission. I look forward to our triumph.\"",
+      "id": "hF53tO0"
+    },
+    {
+      "title": "Comedic Story",
+      "author": "Someone Else",
+      "category": "comedy",
+      "year": 2023,
+      "blurb": "I hate comedy. It's coarse and rough and irritating and it gets on everything.",
+      "body": "I couldn't copy my funny story from fanfiction.net, cos I lost access to my old fanfiction.net account, so now I can't prove to fanfiction.net that I wrote it and I can't copy it, so this is what we're stuck with.",
+      "id": "sVTgx99"
+    },
+    {
+      "title": "Test Story",
       "author": "Pamela Heystek",
       "year": 2023,
-      "blurb": "Vader remembers falling for Obi-Wan. 22 years ago, his then master had confessed his feelings for him and proposed a plan to deceive the Council into allowing their union. At first, Anakin hadn't felt the same way. But as Obi-Wan helped him prepare for the Trials, the young Padawan found himself strangely charmed by this more passionate side of his master. Was this new version of Obi-Wan the antidote to the darkness threatening to consume Anakin? Or was he just another hypocritical Jedi traitor? Either way, Vader can't forget him.",
-      "body": "The black figure gazed at the young man who stood at the end of the narrow beam, gripping the metal spire, closer than ever, but still out of reach. Luke Kenobi was glaring, nostrils flared, not at cauterised remains of his right arm, but at him.\n\n\"I'll never join you,\" said Luke, through gritted teeth.\n\nBehind the rigid mask, a smirk creased his disfigured face. This defiance was familiar and could prove useful. \"If you only knew the power of the dark side,\" he said, through his vocabulator, \"Obi-Wan never told you what happened to your other father.\"\n\nLuke stepped onto the ring at the base of the spire then turned to face him again. \"Obi-Wan was my only father and you killed him.\n\n\"No, I am one of your fathers, your true father.\"\n\n\"No, no.\" Luke's face twisted. His eyes bulged. \"That's not true. That's impossible.\"\n\n\"Search your feelings. You know it to be true.\"\n\nHis son cried out twice more over the howling wind.\n\n\"Luke, you can destroy the Emperor. He has foreseen this. It is your destiny, just as defeating the Jedi was mine. Do not mourn their loss. They sought to enslave you. I forbade it, but Obi-Wan ignored my wishes. He stole you from me, along with your mother and sister. Now you have returned. Join me and together we will rule the galaxy as father and son.\" He extended a gloved hand. \"Come with me. It is the only way.\"",
-      "id": "JJEVOFP"
+      "category": "general",
+      "blurb": "Hello",
+      "body": "Hello",
+      "id": "50iFppd"
     }
   ]
 }
