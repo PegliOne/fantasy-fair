@@ -1,12 +1,13 @@
 const capitalise = function(text) {
-  // Make this work more generally
-  if (text === 'publication-year') {
-    return 'Publication Year'
-  }
-  if (text === 'sci-fi') {
-    return 'Sci-Fi';
-  }
-  return text.charAt(0).toUpperCase() + text.slice(1);
+  let capitalisedText = capitaliseWithSplit(text, '-');
+  capitalisedText = capitaliseWithSplit(capitalisedText, ' ');
+  return capitalisedText;
+}
+
+const capitaliseWithSplit = function(text, splitter) {
+  text = text.split(splitter);
+  text = text.map((word) => word.charAt(0).toUpperCase() + word.slice(1));
+  return text.join(splitter);
 }
 
 export default capitalise;

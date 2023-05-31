@@ -15,7 +15,7 @@ const InputContainer = styled.div`
 const FormInput = (props) => {
   return ( 
     <InputContainer>
-      <label htmlFor={props.label}>{capitalise(props.label)}:</label>
+      <label htmlFor={props.label}>{capitalise(props.label).replace('-',' ')}:</label>
       <input id={props.label} name={props.label} type={props.type} placeholder={`Enter the story ${props.label}...`} min={props.min} max={props.max} value={props.value} onChange={(e) => props.function(e.target.value)} />
     </InputContainer>
   );
