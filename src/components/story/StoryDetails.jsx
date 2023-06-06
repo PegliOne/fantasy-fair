@@ -24,14 +24,21 @@ const Story = () => {
   const url = `http://localhost:8000/stories/${id}`
   
   const { stories: story, error } = useFetchStories(url);
+  const showError = error && Object.keys(story).length === 0;
+
+  function addParagraphBreaks(text) {
+    console.log(text);
+    console.log(text.replace(/\n/g, "<br />"));
+    return text.replace(/\n/g, "<br />");
+  }
 
   return ( 
     <main>
-      { (!!error || !!story && Object.keys(story).length === 0) && <p className="error">Error: Story not found</p> }
-      { !!story && Object.keys(story).length != 0 && <StorySection>
+      { showError && <p className="error">Error: Story not found</p> }
+      { !!story && Object.keys(story).length !== 0 && <StorySection>
         <h1>{ story.title } ({ story.year })</h1>
         <p>By { story.author }</p>
-        <div>{ story.body }</div>
+        <div dangerouslySetInnerHTML={{ __html: addParagraphBreaks(story.body) }}></div>
         <BackLink to="/">Back to Story List</BackLink>
       </StorySection> }
     </main>

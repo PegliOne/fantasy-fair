@@ -44,37 +44,3 @@ html {
 .App main > p.error {
   margin-top: 48px;
 }
-
-.App main form section div.form-row {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.App main form section div.form-row div {
-  margin-bottom: 24px;
-}
-
-.App main form label {
-  margin-right: 12px;
-  color: #192841;
-  font-weight: 700;
-}
-
-.App main form button {
-  margin: 24px 0 0 4px;
-  padding: 12px 24px;
-  background-color: #192841;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: background-color 200ms;
-}
-
-.App main form button:hover {
-  background-color: #2D3033;
-  cursor: pointer;
-}
-
-/* Fix number increment and options */

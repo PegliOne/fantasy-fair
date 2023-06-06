@@ -4,19 +4,35 @@ import { useHistory } from 'react-router-dom';
 import TextAreaSection from "../shared/form-components/TextAreaSection";
 import StoryDetailsFormSection from "./create-components/StoryDetailsFormSection";
 
-const Create = () => {
-  const StoryForm = styled.form`
+const StoryForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0 24px;
+
+  section {
     display: flex;
-    flex-direction: column;
-    margin: 24px 0 24px;
+    justify-content: space-around;
+    margin-bottom: 24px;
+  }
 
-    section {
-      display: flex;
-      justify-content: space-around;
-      margin-bottom: 24px;
+  button {
+    margin: 24px 0 24px 4px;
+    padding: 12px 24px;
+    background-color: #192841;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 200ms;
+  
+    &:hover {
+      background-color: #2D3033;
+      cursor: pointer;
     }
-  `
+  }  
+`
 
+const Create = () => {
   const [title, setTitle] = useState('');
   // Have the default be the current username
   const [author, setAuthor] = useState('Pamela Heystek');

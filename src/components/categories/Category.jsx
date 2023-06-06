@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import { useParams } from "react-router-dom";
 import useFetchStories from "../../hooks/useFetchStories";
 import capitalise from '../shared/capitalise';

@@ -15,6 +15,8 @@ const FormSection = styled.section`
     align-items: flex-start;
 
     div {
+      display: flex;
+      width: 280px;
       margin-bottom: 24px;
     }
   }

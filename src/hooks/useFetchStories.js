@@ -15,7 +15,7 @@ const useFetchStories = (url) => {
       .catch(err => {
         setError(err.message);
       })
-  }, []);
+  }, [url]);
 
   return { stories, error };
 }
