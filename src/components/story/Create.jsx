@@ -7,7 +7,7 @@ import StoryDetailsFormSection from "./create-components/StoryDetailsFormSection
 const StoryForm = styled.form`
   display: flex;
   flex-direction: column;
-  margin: 24px 0 24px;
+  margin: 0 0 24px;
 
   section {
     display: flex;

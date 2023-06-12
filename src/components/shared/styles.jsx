@@ -8,18 +8,32 @@ const LinkListContainer = styled.section`
     color: #192841;
     text-decoration: none;
 
-    div {
+    > div {
+      display: flex;
+      justify-content: space-between;
       margin-bottom: 24px;
       padding: 24px;
       border: 2px solid #192841;
       color: #192841;
       transition: background-color 200ms;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
 
       &:hover {
         background-color: #D1E5F4;
+      }
+
+      div.story-info {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 8px;
+      }
+
+      div.story-links {
+        display: flex;
+
+        a {
+          margin-right: 8px;
+        }
       }
     }
   }
