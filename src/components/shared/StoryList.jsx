@@ -8,6 +8,15 @@ const StorySection = styled(LinkListContainer)`
   }
 `
 
+function deleteStory(e, id) {
+  e.preventDefault();
+  fetch(`http://localhost:8000/stories/${id}`, {
+    method: 'DELETE'
+  }).then(() => {
+    window.location.reload();
+  })
+}
+
 const StoryList = ({stories}) => {
   return ( 
     <StorySection>
@@ -19,7 +28,7 @@ const StoryList = ({stories}) => {
           </div>
           <div className="story-links">
             <Link to={ `/stories/${story.id}/edit` }>Edit</Link>
-            <button>Delete</button>
+            <button onClick={(e) => deleteStory(e, story.id)}>Delete</button>
           </div>
         </div>
       </Link>)}

@@ -2,7 +2,7 @@
   "stories": [
     {
       "id": "1",
-      "title": "Once in a Lifetime",
+      "title": "Once in a Lifetime 2",
       "author": "Amanda Kissenger",
       "year": "2013",
       "category": "general",
@@ -37,7 +37,7 @@
       "body": "A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. \n\n A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. \n\n A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it. A romance with some magic in it."
     },
     {
-      "title": "Festivals of the Rebellion",
+      "title": "Festivals of the Rebellion 2",
       "author": "Pamela Heystek",
       "category": "action",
       "year": "2017",
@@ -46,7 +46,7 @@
       "id": "V_b9WUa"
     },
     {
-      "title": "A Cool Sci-Fi Story",
+      "title": "A Cool Sci-Fi Story 2",
       "author": "Jackson Heystek",
       "category": "sci-fi",
       "year": 2023,
@@ -59,63 +59,27 @@
       "author": "Someone Else",
       "category": "comedy",
       "year": 2023,
-      "blurb": "I hate comedy. It's coarse and rough and irritating and it gets on everything.",
+      "blurb": "I hate comedy. It's coarse and rough and irritating and it gets on everything. Right.",
       "body": "I couldn't copy my funny story from fanfiction.net, cos I lost access to my old fanfiction.net account, so now I can't prove to fanfiction.net that I wrote it and I can't copy it, so this is what we're stuck with.",
       "id": "sVTgx99"
     },
     {
-      "title": "Test Story",
+      "title": "Comedic Story",
+      "author": "Someone Else",
+      "year": 2023,
+      "category": "comedy",
+      "blurb": "I hate comedy. It's coarse and rough and irritating and it gets on everything.",
+      "body": "I couldn't copy my funny story from fanfiction.net, cos I lost access to my old fanfiction.net account, so now I can't prove to fanfiction.net that I wrote it and I can't copy it, so this is what we're stuck with.",
+      "id": "1UREimM"
+    },
+    {
+      "title": "New story",
       "author": "Pamela Heystek",
       "year": 2023,
       "category": "general",
-      "blurb": "Hello",
-      "body": "Hello",
-      "id": "50iFppd"
-    },
-    {
-      "title": "New Story with Paragraphs",
-      "author": "Pamela Heystek",
-      "year": 2023,
-      "category": "general",
-      "blurb": "Summary",
-      "body": "Hello there /n/n Hello there",
-      "id": "XSvUHed"
-    },
-    {
-      "title": "New Story with Paragraphs",
-      "author": "Pamela Heystek",
-      "year": 2023,
-      "category": "general",
-      "blurb": "Summary\n",
-      "body": "Hello there \\n\\n Hello there",
-      "id": "Yihu38w"
-    },
-    {
-      "title": "New Story with Paragraphs",
-      "author": "Pamela Heystek",
-      "year": 2023,
-      "category": "general",
-      "blurb": "Summary",
-      "body": "Hello there \n\nHello there",
-      "id": "EbR2xe1"
-    },
-    {
-      "title": "Story with Newlines",
-      "author": "Pamela Heystek",
-      "year": 2023,
-      "category": "general",
-      "blurb": "A story with a bunch of newlines",
-      "body": "First line\n\nSecond line\n\nThird line",
-      "id": "M0mUAWb"
-    },
-    {
-      "title": "Final Test",
-      "author": "Different Author",
-      "year": "2020",
-      "category": "romance",
-      "blurb": "Final test summary",
-      "body": "First line test\n\nSecond line test\n\nThird line test",
-      "id": "c8F2yax"
+      "blurb": "More Stuff",
+      "body": "More Stuff",
+      "id": "DQWWDWT"
     }
   ]
 }

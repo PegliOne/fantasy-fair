@@ -27,8 +27,6 @@ const Story = () => {
   const showError = error && Object.keys(story).length === 0;
 
   function addParagraphBreaks(text) {
-    console.log(text);
-    console.log(text.replace(/\n/g, "<br />"));
     return text.replace(/\n/g, "<br />");
   }
 

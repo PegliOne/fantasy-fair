@@ -5,6 +5,7 @@ import Home from './components/homepage/Home';
 import Categories from './components/categories/Categories';
 import Category from './components/categories/Category';
 import Create from './components/story/Create';
+import Edit from './components/story/Edit';
 import SignUp from './components/sign-up/SignUp';
 import LogIn from './components/log-in/LogIn';
 import Story from './components/story/StoryDetails';
@@ -17,6 +18,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home/>
+          </Route>
+          <Route path="/stories/:id/edit">
+            <Edit/>
           </Route>
           <Route path="/stories/:id">
             <Story/>
