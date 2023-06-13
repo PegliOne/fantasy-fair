@@ -38,7 +38,7 @@ const Header = styled.header`
         transition: background-color 200ms;
 
         &:hover {
-          background-color: #2D3033;
+          background-color: #9866C7;
         }
       }
     }

@@ -31,8 +31,20 @@ const LinkListContainer = styled.section`
       div.story-links {
         display: flex;
 
-        a {
-          margin-right: 8px;
+        a, button {
+          background-color: transparent;
+          border: none;
+          color: #192841;
+          font-size: 16px;
+          font-weight: 600;
+          padding-left: 8px;
+          padding-right: 0;
+          transition: color 200ms;
+
+          &:hover {
+            color: #B47EE5;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -43,9 +55,10 @@ const BackLink = styled(Link)`
   color: #192841;
   font-weight: 600;
   text-decoration: none;
+  transition: color 200ms;
 
   &:hover {
-    color: #4B0076;
+    color: #9866C7;
   }
 `
 

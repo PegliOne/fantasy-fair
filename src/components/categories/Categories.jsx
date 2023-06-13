@@ -14,7 +14,7 @@ const Categories = () => {
       <h2>Check out these Stories in these Categories</h2>
       { !!error && <div><p className="error">Error: { error }</p></div>}
       {!!stories && <CategoryList stories={_.uniqBy(stories, 'category')} />}
-      <BackLink to="/">Or view popular stories</BackLink>
+      <BackLink to="/">Or View Popular Stories</BackLink>
     </main>
   );
 }

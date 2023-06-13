@@ -15,7 +15,7 @@ const Category = () => {
       <h1>{capitalise(category)} Stories</h1>
       { !!error && <div><p className="error">Error: { error }</p></div>}
       { !!stories && <StoryList stories={ stories.filter((story) => story.category === category.toLowerCase()) } />}
-      <BackLink to="/">Or view all popular stories</BackLink>
+      <BackLink to="/">Or View Popular Stories</BackLink>
     </main>
   );
 }
