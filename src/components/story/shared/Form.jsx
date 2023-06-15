@@ -50,31 +50,18 @@ const Form = ({story}) => {
 
     setIsPending(true);
 
-    // Rewrite this logic
-    if (id) {
-      fetch(`http://localhost:8000/stories/${id}`, {
-        method: 'PATCH',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(story)
-      }).then(()=> {
-        setIsPending(false);
-        history.push('/');
-      })
-    } else { 
-      fetch('http://localhost:8000/stories', {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(story)
-      }).then(()=> {
-        setIsPending(false);
-        history.push('/');
-      })
-    }
-    
+    fetch(`http://localhost:8000/stories/${id}`, {
+      method: id ? 'PATCH' : 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(story)
+    }).then(()=> {
+      setIsPending(false);
+      history.push('/');
+    });
   }
 
   return ( 
-    <StoryForm onSubmit={(e) => handleSubmit(e, story.id)}>
+    <StoryForm onSubmit={(e) => handleSubmit(e, story ? story.id : '')}>
       <h3>Story Details</h3>
       <StoryDetailsFormSection title={title} setTitle={setTitle} year={year} setYear={setYear} author={author} setAuthor={setAuthor} setCategory={setCategory} />
       <h3>Summary</h3>

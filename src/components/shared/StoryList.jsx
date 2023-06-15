@@ -27,7 +27,7 @@ const StoryList = ({stories}) => {
             { story.blurb }
           </div>
           <div className="story-links">
-            <Link to={ `/stories/${story.id}/edit` }>Edit</Link>
+            <button href={ `/stories/${story.id}/edit` }>Edit</button>
             <button onClick={(e) => deleteStory(e, story.id)}>Delete</button>
           </div>
         </div>
