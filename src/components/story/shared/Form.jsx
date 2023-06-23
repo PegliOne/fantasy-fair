@@ -1,36 +1,8 @@
-import styled from "@emotion/styled";
 import { useState } from "react";
 import { useHistory } from 'react-router-dom';
+import { StyledForm } from '../../shared/styles';
 import TextAreaSection from "../../shared/form-components/TextAreaSection";
 import StoryDetailsFormSection from "./StoryDetailsFormSection";
-
-const StoryForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 24px;
-
-  section {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 24px;
-  }
-
-  button {
-    margin: 24px 0 24px 4px;
-    padding: 12px 24px;
-    background-color: #192841;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 200ms;
-  
-    &:hover {
-      background-color: #2D3033;
-      cursor: pointer;
-    }
-  }  
-`
 
 const Form = ({story}) => {
   const [title, setTitle] = useState(story ? story.title : '');
@@ -61,7 +33,7 @@ const Form = ({story}) => {
   }
 
   return ( 
-    <StoryForm onSubmit={(e) => handleSubmit(e, story ? story.id : '')}>
+    <StyledForm onSubmit={(e) => handleSubmit(e, story ? story.id : '')}>
       <h3>Story Details</h3>
       <StoryDetailsFormSection title={title} setTitle={setTitle} year={year} setYear={setYear} author={author} setAuthor={setAuthor} setCategory={setCategory} />
       <h3>Summary</h3>
@@ -72,7 +44,7 @@ const Form = ({story}) => {
         { !isPending && <button type="submit">Submit Story</button> }
         { isPending && <button type="submit">Submitting Story</button> }
       </div>
-    </StoryForm>
+    </StyledForm>
   );
 }
  

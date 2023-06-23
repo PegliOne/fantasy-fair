@@ -51,6 +51,46 @@ const LinkListContainer = styled.section`
   }
 `
 
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 24px;
+
+  section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 24px;
+  }
+
+  div.form-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    div {
+      display: flex;
+      width: 340px;
+      margin-bottom: 24px;
+    }
+  }
+
+  button {
+    margin: 24px 0 24px 4px;
+    padding: 12px 24px;
+    background-color: #192841;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 200ms;
+
+    &:hover {
+      background-color: #2D3033;
+      cursor: pointer;
+    }
+  }  
+`
+
 const BackLink = styled(Link)`
   color: #192841;
   font-weight: 600;
@@ -64,5 +104,6 @@ const BackLink = styled(Link)`
 
 export {
   LinkListContainer,
+  StyledForm,
   BackLink
 };

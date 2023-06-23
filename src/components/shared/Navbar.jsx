@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
+// Add navbar styles that highlight selected button
+
 const Header = styled.header`
   background-color: #192841;
   display: flex;

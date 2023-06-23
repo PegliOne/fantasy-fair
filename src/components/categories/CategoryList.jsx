@@ -7,6 +7,7 @@ const CategorySection = styled(LinkListContainer)`
   margin-bottom: 12px;
 
   a div {
+    justify-content: center;
     padding: 24px;
     font-weight: 600;
   }
