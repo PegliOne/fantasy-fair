@@ -63,5 +63,19 @@
       "body": "I couldn't copy my funny story from fanfiction.net, cos I lost access to my old fanfiction.net account, so now I can't prove to fanfiction.net that I wrote it and I can't copy it, so this is what we're stuck with.",
       "id": "sVTgx99"
     }
+  ],
+  "users": [
+    {
+      "username": "Pamela Glickman",
+      "email": "pamela.e.glickman@gmail.com",
+      "password": "chicken",
+      "id": 1
+    },
+    {
+      "username": "PegliTwo",
+      "email": "pamela@gmail.com",
+      "password": "afjsdklfsdjlk",
+      "id": 2
+    }
   ]
 }
