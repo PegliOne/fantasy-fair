@@ -1,3 +1,4 @@
+import Meteor from 'meteor-react-js';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
@@ -55,11 +56,12 @@ const Navbar = () => {
         <ul>
           <Link to="/">Home</Link>
           <Link to="/categories">Story Categories</Link>
-          <Link to="/create">Create a Story</Link>
+          { Meteor.user() && <Link to="/create">Create a Story</Link> }
         </ul>
         <ul>
-          <Link to="/sign_up">Sign Up</Link>
-          <Link to="/log_in">Log In</Link>
+          { !Meteor.user() && <Link to="/log_out">Log Out</Link> }
+          { Meteor.user() && <Link to="/sign_up">Sign Up</Link> }
+          { Meteor.user() && <Link to="/log_in">Log In</Link> }
         </ul>
       </nav>
     </Header>
