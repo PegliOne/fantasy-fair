@@ -76,6 +76,18 @@
       "email": "pamela@gmail.com",
       "password": "afjsdklfsdjlk",
       "id": 2
+    },
+    {
+      "username": "ValidUser",
+      "email": "valid@gmail.com",
+      "password": "chickens",
+      "id": 3
+    },
+    {
+      "username": "dfgdsfgdfgf",
+      "email": "pamela@gmail.com",
+      "password": "kfsdfsdASDSAFDSA12312412",
+      "id": 4
     }
   ]
 }

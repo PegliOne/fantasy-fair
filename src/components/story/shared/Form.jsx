@@ -1,4 +1,4 @@
-import Meteor from 'meteor-react-js';
+// import Meteor from 'meteor-react-js';
 import { useState } from "react";
 import { useHistory } from 'react-router-dom';
 import { StyledForm } from '../../shared/styles';
@@ -7,8 +7,8 @@ import StoryDetailsFormSection from "./StoryDetailsFormSection";
 
 const Form = ({story}) => {
   const [title, setTitle] = useState(story ? story.title : '');
-  // Update default author to author username
-  const [author, setAuthor] = useState(story ? story.author : Meteor.user());
+  // Make default logged in author work
+  const [author, setAuthor] = useState(story ? story.author : 'Meteor.user().username');
   const [category, setCategory] = useState(story ? story.category : 'general');
   const [year, setYear] = useState(story ? story.year : 2023);
   const [blurb, setBlurb] = useState(story ? story.blurb : '');

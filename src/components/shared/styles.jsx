@@ -74,6 +74,11 @@ const StyledForm = styled.form`
     }
   }
 
+  div p.error {
+    width: 340px;
+    margin-top: 36px;
+  }
+
   button {
     margin: 24px 0 24px 4px;
     padding: 12px 24px;

@@ -10,13 +10,11 @@ import SignUp from './components/sign-up/SignUp';
 import LogIn from './components/log-in/LogIn';
 import Story from './components/story/StoryDetails';
 
-// Only show the Login form link or the Sign Up form link
-
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar/>
+        <Navbar />
         <Switch>
           <Route exact path="/">
             <Home/>

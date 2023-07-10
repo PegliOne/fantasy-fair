@@ -1,8 +1,6 @@
 import Meteor from 'meteor-react-js';
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
-
-// Add navbar styles that highlight selected button
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = styled.header`
   background-color: #192841;
@@ -40,6 +38,14 @@ const Header = styled.header`
         font-size: calc(10px + 1vmin);
         transition: background-color 200ms;
 
+        &.selected {
+          background-color: #69036D;
+
+          &:hover {
+            background-color: #69036D;
+          }
+        }
+
         &:hover {
           background-color: #9866C7;
         }
@@ -49,19 +55,21 @@ const Header = styled.header`
 `;
 
 const Navbar = () => {
-  return ( 
+  const path = useLocation().pathname;
+
+  return (
     <Header>
       <div>Fantasy Fair</div>
       <nav>
         <ul>
-          <Link to="/">Home</Link>
-          <Link to="/categories">Story Categories</Link>
-          { Meteor.user() && <Link to="/create">Create a Story</Link> }
+          <Link to="/" className={ path === '/' ? 'selected' : '' }>Home</Link>
+          <Link to="/categories" className={ path === '/categories' ? 'selected' : '' }>Story Categories</Link>
+          { Meteor.user() && <Link to="/create" className={ path === '/create' ? 'selected' : '' }>Create a Story</Link> }
         </ul>
         <ul>
-          { !Meteor.user() && <Link to="/log_out">Log Out</Link> }
-          { Meteor.user() && <Link to="/sign_up">Sign Up</Link> }
-          { Meteor.user() && <Link to="/log_in">Log In</Link> }
+          { Meteor.user() && <Link to="/log_out" className={ path === '/log_out' ? 'selected' : '' }>Log Out</Link> }
+          { !Meteor.user() && <Link to="/sign_up" className={ path === '/sign_up' ? 'selected' : '' }>Sign Up</Link> }
+          { !Meteor.user() && <Link to="/log_in" className={ path === '/log_in' ? 'selected' : '' }>Log In</Link> }
         </ul>
       </nav>
     </Header>

@@ -22,8 +22,8 @@ const InputContainer = styled.div`
 const FormInput = (props) => {
   return ( 
     <InputContainer>
-      <label htmlFor={props.label}>{capitalise(props.label).replace('-',' ')}:</label>
-      <input id={props.label} name={props.label} type={props.type} placeholder={`Enter the story ${props.label}...`} min={props.min} max={props.max} value={props.value} onChange={(e) => { props.function(e.target.value); e.target.focus() } } />
+      <label htmlFor={props.label}>{capitalise(props.label).replace('-',' ')} {props.required ? '*' : ''}:</label>
+      <input id={props.label} name={props.label} type={props.type} placeholder={`Enter the story ${props.label}...`} min={props.min} max={props.max} minlength={props.minlength} maxlength={props.maxlength} value={props.value} onChange={(e) => { props.function(e.target.value); e.target.focus() } } required={props.required} />
     </InputContainer>
   );
 }
