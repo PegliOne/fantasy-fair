@@ -74,9 +74,15 @@ const StyledForm = styled.form`
     }
   }
 
-  div p.error {
-    width: 340px;
-    margin-top: 36px;
+  div p {
+    &.info {
+      margin-top: 24px;
+    }
+
+    &.error {
+      width: 340px;
+      margin-top: 36px;
+    }  
   }
 
   button {

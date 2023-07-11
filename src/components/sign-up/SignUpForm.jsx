@@ -25,18 +25,14 @@ const SignUpForm = () => {
       })
   }, []);
 
-  function handleSubmit (e) {
-    e.preventDefault();
+  function validatePassword(password) {
+    return /[a-z]/.test(password) && /[A-Z]/.test(password) && /[0-9]/.test(password);
+  }
 
-    const user = { username, email, password };
+  function submitForm(user) {
+    const passwordIsValid = validatePassword(password);
 
-    const passwordIsValid = /[a-z]/.test(password) && /[A-Z]/.test(password) && /[0-9]/.test(password);
-
-    setIsPending(true);
-
-    // Replace with case
-
-    if (currentUsernames.includes(username)) {
+    if (currentUsernames.includes(user.username)) {
       setIsPending(false);
       setError('Error: Username is already taken');
     } else if (!passwordIsValid) {
@@ -54,7 +50,17 @@ const SignUpForm = () => {
     }
   }
 
-  return (<StyledForm style={{width: '340px'}} onSubmit={(e) => handleSubmit(e)}>
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const user = { username, email, password };
+
+    setIsPending(true);
+
+    submitForm(user);
+  }
+
+  return (<StyledForm onSubmit={(e) => handleSubmit(e)}>
     <div className="form-row">
       <FormInput type="text" label="username" value={username} function={setUsername} minlength={8} maxlength={16} required={true} />
     </div>
@@ -67,7 +73,7 @@ const SignUpForm = () => {
     <div>
       { !isPending && <button type="submit">Sign Up</button> }
       { isPending && <button type="submit">Creating User</button> }
-      <p style={{marginTop: '24px'}}>An * indicates a required field.</p>
+      <p class="info">An * indicates a required field.</p>
       <p class="error">{ error }</p>
     </div>
   </StyledForm>);

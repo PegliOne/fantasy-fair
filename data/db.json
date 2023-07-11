@@ -88,6 +88,12 @@
       "email": "pamela@gmail.com",
       "password": "kfsdfsdASDSAFDSA12312412",
       "id": 4
+    },
+    {
+      "username": "PegliOne",
+      "email": "peglione@gmail.com",
+      "password": "Chickens123",
+      "id": 5
     }
   ]
 }
