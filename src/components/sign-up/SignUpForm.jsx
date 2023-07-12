@@ -62,7 +62,7 @@ const SignUpForm = () => {
 
   return (<StyledForm onSubmit={(e) => handleSubmit(e)}>
     <div className="form-row">
-      <FormInput type="text" label="username" value={username} function={setUsername} minlength={8} maxlength={16} required={true} />
+      <FormInput type="text" label="username" value={username} function={setUsername} minLength={8} maxLength={16} required={true} />
     </div>
     <div className="form-row">
       <FormInput type="email" label="email" value={email} function={setEmail} required={true} />
@@ -73,8 +73,8 @@ const SignUpForm = () => {
     <div>
       { !isPending && <button type="submit">Sign Up</button> }
       { isPending && <button type="submit">Creating User</button> }
-      <p class="info">An * indicates a required field.</p>
-      <p class="error">{ error }</p>
+      <p className="info">An * indicates a required field.</p>
+      <p className="error">{ error }</p>
     </div>
   </StyledForm>);
 }
