@@ -34,7 +34,7 @@ const StoryDetailsFormSection = (props) => {
       <div className="form-row">
         <FormInput type="text" label="author" value={props.author} function={props.setAuthor} />
         <FormSelect label="category" values={categories} function={props.setCategory} />
-      </div>  
+      </div>
     </FormSection>
   );
 }

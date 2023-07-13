@@ -7,6 +7,7 @@ const SignUpForm = () => {
   const [username, setUsername] = useState('');
   const [currentUsernames, setCurrentUsernames] = useState('');
   const [email, setEmail] = useState('');
+  const [currentEmails, setCurrentEmails] = useState('');
   const [password, setPassword] = useState('');
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState('');
@@ -15,31 +16,26 @@ const SignUpForm = () => {
   useEffect(() => {
     fetch('http://localhost:8000/users')
       .then(res => {
-        return res.json()
+        return res.json();
       })
       .then(data => {
         const usernames = data.map((user) => {
-          return user.username
-        });
+          return user.username;
+        })
+        const emails = data.map((user) => {
+          return user.email;
+        })
         setCurrentUsernames(usernames);
+        setCurrentEmails(emails);
       })
   }, []);
 
   function validatePassword(password) {
-    return /[a-z]/.test(password) && /[A-Z]/.test(password) && /[0-9]/.test(password);
+    return /[a-zA-Z]/.test(password) && /[0-9]/.test(password) && /![a-zA-Z0-9]/.test(password);
   }
 
   function submitForm(user) {
-    const passwordIsValid = validatePassword(password);
-
-    if (currentUsernames.includes(user.username)) {
-      setIsPending(false);
-      setError('Error: Username is already taken');
-    } else if (!passwordIsValid) {
-      setIsPending(false);
-      setError('Error: Password must contain lowercase letters, uppercase letters and numbers');
-    } else {
-      fetch(`http://localhost:8000/users`, {
+    fetch(`http://localhost:8000/users`, {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(user)
@@ -47,6 +43,22 @@ const SignUpForm = () => {
         setIsPending(false);
         history.push('/');
       });
+  }
+
+  function verifyAndSubmitForm(user) {
+    const passwordIsValid = validatePassword(password);
+
+    if (currentUsernames.includes(user.username)) {
+      setIsPending(false);
+      setError('Error: Username is already taken');
+    } else if (currentEmails.includes(user.email)) {
+      setIsPending(false);
+      setError('Error: Email is already taken');
+    } else if (!passwordIsValid) {
+      setIsPending(false);
+      setError('Error: Password must contain at least one letter, number and special character');
+    } else {
+      submitForm(user);
     }
   }
 
@@ -57,7 +69,7 @@ const SignUpForm = () => {
 
     setIsPending(true);
 
-    submitForm(user);
+    verifyAndSubmitForm(user);
   }
 
   return (<StyledForm onSubmit={(e) => handleSubmit(e)}>
