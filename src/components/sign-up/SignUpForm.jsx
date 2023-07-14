@@ -1,65 +1,44 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useHistory } from 'react-router-dom';
 import { StyledForm } from "../shared/styles";
+import validatePassword from "./validate-password";
+import useFetchCurrentUsersDetails from "../../hooks/useFetchCurrentUsersDetails";
 import FormInput from "../shared/form-components/FormInput";
 
 const SignUpForm = () => {
   const [username, setUsername] = useState('');
-  const [currentUsernames, setCurrentUsernames] = useState('');
   const [email, setEmail] = useState('');
-  const [currentEmails, setCurrentEmails] = useState('');
   const [password, setPassword] = useState('');
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState('');
   const history = useHistory();
 
-  useEffect(() => {
-    fetch('http://localhost:8000/users')
-      .then(res => {
-        return res.json();
-      })
-      .then(data => {
-        const usernames = data.map((user) => {
-          return user.username;
-        })
-        const emails = data.map((user) => {
-          return user.email;
-        })
-        setCurrentUsernames(usernames);
-        setCurrentEmails(emails);
-      })
-  }, []);
-
-  function validatePassword(password) {
-    return /[a-zA-Z]/.test(password) && /[0-9]/.test(password) && /![a-zA-Z0-9]/.test(password);
-  }
+  const { usernames: currentUsernames, emails: currentEmails } = useFetchCurrentUsersDetails('http://localhost:8000/users');
 
   function submitForm(user) {
     fetch(`http://localhost:8000/users`, {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(user)
-      }).then(()=> {
-        setIsPending(false);
-        history.push('/');
-      });
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(user)
+    }).then(()=> {
+      history.push('/');
+    });
   }
 
   function verifyAndSubmitForm(user) {
     const passwordIsValid = validatePassword(password);
 
     if (currentUsernames.includes(user.username)) {
-      setIsPending(false);
       setError('Error: Username is already taken');
     } else if (currentEmails.includes(user.email)) {
-      setIsPending(false);
       setError('Error: Email is already taken');
     } else if (!passwordIsValid) {
-      setIsPending(false);
       setError('Error: Password must contain at least one letter, number and special character');
     } else {
       submitForm(user);
     }
+
+    setIsPending(false);
   }
 
   function handleSubmit(e) {
