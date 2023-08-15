@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import capitalise from '../capitalise';
+import capitalise from "../capitalise";
 
 const SelectContainer = styled.div`
   select {

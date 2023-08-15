@@ -1,10 +1,10 @@
-import useFetchStories from "../../hooks/useFetchStories";
+import useFetchData from "../../hooks/useFetchData";
 import StoryList from "../shared/StoryList";
 
-const url = 'http://localhost:8000/stories';
+const url = "http://localhost:8000/stories";
 
 const Home = () => {
-  const { stories, error } = useFetchStories(url);
+  const { data: stories, error } = useFetchData(url);
 
   return ( 
     <main>

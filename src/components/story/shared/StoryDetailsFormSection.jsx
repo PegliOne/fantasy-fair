@@ -23,7 +23,7 @@ const FormSection = styled.section`
 `
 
 const StoryDetailsFormSection = (props) => {
-  const categories = ['general', 'romance', 'action', 'fantasy', 'sci-fi', 'comedy'];
+  const categories = ["general", "romance", "action", "fantasy", "sci-fi", "comedy"];
 
   return ( 
     <FormSection>

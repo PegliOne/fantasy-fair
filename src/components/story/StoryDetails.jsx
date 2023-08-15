@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { useParams } from "react-router-dom";
-import useFetchStories from "../../hooks/useFetchStories";
+import useFetchData from "../../hooks/useFetchData";
 import { BackLink } from "../shared/styles";
 
 const StorySection = styled.section`
@@ -23,7 +23,7 @@ const Story = () => {
   const { id } = useParams();
   const url = `http://localhost:8000/stories/${id}`
   
-  const { stories: story, error } = useFetchStories(url);
+  const { data: story, error } = useFetchData(url);
   const showError = error && Object.keys(story).length === 0;
 
   function addParagraphBreaks(text) {

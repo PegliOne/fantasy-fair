@@ -1,39 +1,47 @@
 import { useState } from "react";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 import { StyledForm } from "../shared/styles";
 import validatePassword from "./validate-password";
-import useFetchCurrentUsersDetails from "../../hooks/useFetchCurrentUsersDetails";
+import useFetchData from "../../hooks/useFetchData";
 import FormInput from "../shared/form-components/FormInput";
 
 const SignUpForm = () => {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [isPending, setIsPending] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const history = useHistory();
 
-  const { usernames: currentUsernames, emails: currentEmails } = useFetchCurrentUsersDetails('http://localhost:8000/users');
+  const { data: storedUsers, error: serverError } = useFetchData("http://localhost:8000/users");
 
   function submitForm(user) {
     fetch(`http://localhost:8000/users`, {
-      method: 'POST',
+      method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user)
     }).then(()=> {
-      history.push('/');
+      history.push("/");
     });
+  }
+
+  function extractPropertiesFromObjectArray(array, data) {
+    return array.map((element) => {
+      return element[data];
+    })
   }
 
   function verifyAndSubmitForm(user) {
     const passwordIsValid = validatePassword(password);
+    const storedUsernames = extractPropertiesFromObjectArray(storedUsers, "username");
+    const storedEmails = extractPropertiesFromObjectArray(storedUsers, "email");
 
-    if (currentUsernames.includes(user.username)) {
-      setError('Error: Username is already taken');
-    } else if (currentEmails.includes(user.email)) {
-      setError('Error: Email is already taken');
+    if (storedUsernames.includes(user.username)) {
+      setError("Error: Username is already taken");
+    } else if (storedEmails.includes(user.email)) {
+      setError("Error: Email is already taken");
     } else if (!passwordIsValid) {
-      setError('Error: Password must contain at least one letter, number and special character');
+      setError("Error: Password must contain at least one letter, number and special character");
     } else {
       submitForm(user);
     }
@@ -66,6 +74,7 @@ const SignUpForm = () => {
       { isPending && <button type="submit">Creating User</button> }
       <p className="info">An * indicates a required field.</p>
       <p className="error">{ error }</p>
+      { serverError && <p className="error">Error: { serverError }</p> }
     </div>
   </StyledForm>);
 }

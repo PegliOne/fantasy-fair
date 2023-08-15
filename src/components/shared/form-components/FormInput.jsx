@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import capitalise from '../capitalise';
+import capitalise from "../capitalise";
 
 const InputContainer = styled.div`
   label {
@@ -22,7 +22,7 @@ const InputContainer = styled.div`
 const FormInput = (props) => {
   return ( 
     <InputContainer>
-      <label htmlFor={props.label}>{capitalise(props.label).replace('-',' ')} {props.required ? '*' : ''}:</label>
+      <label htmlFor={props.label}>{capitalise(props.label).replace("-"," ")} {props.required ? "*" : ""}:</label>
       <input id={props.label} name={props.label} type={props.type} placeholder={`Enter the story ${props.label}...`} min={props.min} max={props.max} minLength={props.minlength} maxLength={props.maxlength} value={props.value} onChange={(e) => { props.function(e.target.value); e.target.focus() } } required={props.required} />
     </InputContainer>
   );

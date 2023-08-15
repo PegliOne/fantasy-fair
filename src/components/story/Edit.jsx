@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
-import useFetchStories from "../../hooks/useFetchStories";
+import useFetchData from "../../hooks/useFetchData";
 import Form from "./shared/Form";
 
 const Edit = () => {
   const { id } = useParams();
   const url = `http://localhost:8000/stories/${id}`;
   
-  const { stories: story } = useFetchStories(url);
+  const { data: story } = useFetchData(url);
 
   return ( 
     <main>

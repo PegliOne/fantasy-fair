@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-const useFetchStories = (url) => {
-  const [stories, setStories] = useState();
+const useFetchData = (url) => {
+  const [data, setData] = useState();
   const [error, setError] = useState();
 
   useEffect(() => {
@@ -10,14 +10,14 @@ const useFetchStories = (url) => {
         return res.json();
       })
       .then(data => {
-        setStories(data);
+        setData(data);
       })
       .catch(err => {
         setError(err.message);
       })
   }, [url]);
 
-  return { stories, error };
+  return { data, error };
 }
 
-export default useFetchStories;
+export default useFetchData;

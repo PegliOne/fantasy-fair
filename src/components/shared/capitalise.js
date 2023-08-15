@@ -1,6 +1,6 @@
 const capitalise = function(text) {
-  let capitalisedText = capitaliseWithSplit(text, '-');
-  capitalisedText = capitaliseWithSplit(capitalisedText, ' ');
+  let capitalisedText = capitaliseWithSplit(text, "-");
+  capitalisedText = capitaliseWithSplit(capitalisedText, " ");
   return capitalisedText;
 }
 

@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
-import { LinkListContainer } from './styles';
-import { Link } from 'react-router-dom';
+import styled from "@emotion/styled";
+import { LinkListContainer } from "./styles";
+import { Link } from "react-router-dom";
 
 const StorySection = styled(LinkListContainer)`
   a div span {
@@ -11,7 +11,7 @@ const StorySection = styled(LinkListContainer)`
 function deleteStory(e, id) {
   e.preventDefault();
   fetch(`http://localhost:8000/stories/${id}`, {
-    method: 'DELETE'
+    method: "DELETE"
   }).then(() => {
     window.location.reload();
   })

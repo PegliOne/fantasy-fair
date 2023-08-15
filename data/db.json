@@ -94,6 +94,12 @@
       "email": "peglione@gmail.com",
       "password": "Chickens123",
       "id": 5
+    },
+    {
+      "username": "PegliThree",
+      "email": "pamela.e.three@gmail.com",
+      "password": "SNLT12hrs@",
+      "id": 6
     }
   ]
 }

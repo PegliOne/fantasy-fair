@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
-import { LinkListContainer } from '../shared/styles';
-import { Link } from 'react-router-dom';
-import capitalise from '../shared/capitalise';
+import styled from "@emotion/styled";
+import { LinkListContainer } from "../shared/styles";
+import { Link } from "react-router-dom";
+import capitalise from "../shared/capitalise";
 
 const CategorySection = styled(LinkListContainer)`
   margin-bottom: 12px;
